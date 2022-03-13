@@ -1,1 +1,6 @@
 # Deepfake Detectiom Benchmark
+As increasing deepfake detection methods are proposed, we devote to establish a fair, comprehensive and strict benchmark to quantitatively evaluate these methods considering their in-domain detection ability, cross-domain generalization ability, robustness and practicability. This is an online benchmark in which participating methods would be trained on our standard training datasets(including 7 public datasets) and evaluated on our strandard test datasets and ID test set. The evaluation would be measured by 6 metrics, namely in-domain AUC, cross-domain AUC, AUC vs. perturbation curve, AUC vs. FLOPs curve, AUC vs. number of parameters curve and AUC vs. inference time curve.
+
+As part of the benchmark, we take the lead in re-implementing and evaluating 9 popular detection algorithms from existing literature and publish the leaderboard below. We will maintain the leaderborad of the best detection algorithms as increasing algorithms were incorporated in.
+
+The goal of our benchmark is to offer a comparative and considerable evaluation and further clarify the state-of-the-art among deepfake detection algorithms. Moreover, we hope that our benchmark will serve the deepfake detection community as a standardized benchmark and encourage the researchers to make reproducible and practical contributions to this field.
