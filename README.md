@@ -1,11 +1,188 @@
 # Deepfake Detectiom Benchmark
-As increasing deepfake detection methods are proposed, we devote to establish a fair, comprehensive and strict benchmark to quantitatively evaluate these methods considering their in-domain detection ability, cross-domain generalization ability, robustness and practicability. This is an online benchmark in which participating methods would be trained on our standard training datasets(including 7 public datasets) and evaluated on our strandard test datasets and ID test set. The evaluation would be measured by 6 metrics, namely in-domain AUC, cross-domain AUC, AUC vs. perturbation curve, AUC vs. FLOPs curve, AUC vs. number of parameters curve and AUC vs. inference time curve.
+As increasing deepfake detection methods are proposed, we devote to establish a fair, comprehensive and strict benchmark to quantitatively evaluate these methods considering their in-domain detection ability, cross-domain generalization ability, robustness and practicability. This is an online benchmark in which participating methods would be trained on our standard training datasets(including 7 public datasets) and evaluated on our strandard test datasets and ID test(imperceptible and diverse test) set. The evaluation would be measured by 6 metrics, namely in-domain AUC, cross-domain AUC, AUC vs. perturbation curve, AUC vs. FLOPs curve, AUC vs. number of parameters curve and AUC vs. inference time curve.
 
 As part of the benchmark, we take the lead in re-implementing and evaluating 9 popular detection algorithms from existing literature and publish the leaderboard below. We will maintain the leaderborad of the best detection algorithms as increasing algorithms were incorporated in.
 
 The goal of our benchmark is to offer a comparative and considerable evaluation and further clarify the state-of-the-art among deepfake detection algorithms. Moreover, we hope that our benchmark will serve the deepfake detection community as a standardized benchmark and encourage the researchers to make reproducible and practical contributions to this field.
 
 ## Leaderboard evaluated on Standard Test Datasets
+
+<table>
+    <thead>
+        <tr>
+          <th>Train</th>
+          <th>UADFV</th>
+          <th>DF-TIMIT</th>
+          <th>Celeb-DF</th>
+          <th>DF-1.0</th>
+          <th>FF++/DF</th>
+          <th>FF++/FS</th>
+          <th>FF++/FShifter</th>
+          <th>DFDC</th>
+          <th>ForgeryNet</th>
+          <th rowspan=2>Average AUC(%)</th>
+        </tr>
+      <tr>
+          <th>Test</th>
+          <th>UADFV</th>
+          <th>DF-TIMIT</th>
+          <th>Celeb-DF</th>
+          <th>DF-1.0</th>
+          <th>FF++/DF</th>
+          <th>FF++/FS</th>
+          <th>FF++/FShifter</th>
+          <th>DFDC</th>
+          <th>ForgeryNet</th>
+        </tr>
+  </thead>
+  <tbody>
+        <tr>
+          <td>Face X-ray</td>
+          <td>97.1</td>
+          <td>98.5</td>
+          <td>97.8</td>
+          <td>84.7</td>
+          <td>99.4</td>
+          <td>99.8</td>
+          <td>99.7</td>
+          <td>-</td>
+          <td>-</td>
+          <td>96.7(96.7)</td>
+        </tr>
+        <tr>
+           <td>FWA-Resnet50</td>
+           <td>57.3</td>
+           <td>99.1</td>
+           <td>60.3</td>
+           <td>60.5</td>
+           <td>80.6</td>
+           <td>61.2</td>
+           <td>50.0</td>
+           <td>47.6</td>
+           <td>50.3</td>
+           <td>63.6(67.0)</td>
+        </tr>
+        <tr>
+            <td>HeadPose</td>
+            <td>88.3</td>
+            <td>62.3</td>
+            <td>-</td>
+            <td>57.2</td>
+            <td>57.0</td>
+            <td>52.3</td>
+            <td>61.2</td>
+            <td>-</td>
+            <td>-</td>
+            <td>63.0(63.0)</td>
+        </tr>
+        <tr>
+            <td>Meosonet-4</td>
+            <td>97.7</td>
+            <td>100.0</td>
+            <td>99.0</td>
+            <td>100.0</td>
+            <td>99.1</td>
+            <td>99.4</td>
+            <td>99.6</td>
+            <td>93.8</td>
+            <td>71.2</td>
+            <td>95.5(99.2)</td>
+        </tr>
+        <tr>
+            <td>MeosoIncept-4</td>
+            <td>97.8</td>
+            <td>100.0</td>
+            <td>98.7</td>
+            <td>100.0</td>
+            <td>98.9</td>
+            <td>96.8</td>
+            <td>99.5</td>
+            <td>94.8</td>
+            <td>67.0</td>
+            <td>94.8(98.8)</td>
+        </tr>
+        <tr>
+            <td>Patch-resnet</td>
+            <td>98.4</td>
+            <td>100.0</td>
+            <td>89.8</td>
+            <td>99.9</td>
+            <td>99.5</td>
+            <td>99.7</td>
+            <td>99.5</td>
+            <td>90.1</td>
+            <td>60.5</td>
+            <td>92.4(98.1)</td>
+        </tr>
+        <tr>
+            <td>Patch-xception</td>
+            <td>97.4</td>
+            <td>100.0</td>
+            <td>90.9</td>
+            <td>100.0</td>
+            <td>99.9</td>
+            <td>99.6</td>
+            <td>99.7</td>
+            <td>92.7</td>
+            <td>60.1</td>
+            <td>93.3(98.2)</td>
+        </tr>
+        <tr>
+            <td>Xception</td>
+            <td>95.3</td>
+            <td>100.0</td>
+            <td>84.7</td>
+            <td>98.6</td>
+            <td>99.3</td>
+            <td>98.4</td>
+            <td>99.3</td>
+            <td>79.7</td>
+            <td>64.4</td>
+            <td>91.0(96.5)</td>
+        </tr>
+        <tr>
+            <td>FFD</td>
+            <td>99.1</td>
+            <td>100.0</td>
+            <td>99.5</td>
+            <td>75.9</td>
+            <td>99.7</td>
+            <td>99.6</td>
+            <td>100.0</td>
+            <td>-</td>
+            <td>-</td>
+            <td>96.2(96.2)</td>
+        </tr>
+        <tr>
+            <td>Multi-attention</td>
+            <td>99.0</td>
+            <td>100.0</td>
+            <td>100.0</td>
+            <td>99.9</td>
+            <td>99.2</td>
+            <td>99.7</td>
+            <td>100.0</td>
+            <td>99.0</td>
+            <td>80.1</td>
+            <td>97.4(99.6)</td>
+        </tr>
+        <tr>
+            <td>Conv LSTM</td>
+            <td>92.0</td>
+            <td>100.0</td>
+            <td>99.6</td>
+            <td>100.0</td>
+            <td>99.7</td>
+            <td>99.8</td>
+            <td>99.9</td>
+            <td>86.7</td>
+            <td>60.7</td>
+            <td>93.1(98.7)</td>
+        </tr>
+    </tbody>
+</table>
+
+## Leaderboard evaluated on ID Test Datasets
 <table>
     <thead>
         <tr>
