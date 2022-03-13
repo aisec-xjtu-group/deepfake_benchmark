@@ -5,7 +5,7 @@ As part of the benchmark, we take the lead in re-implementing and evaluating 9 p
 
 The goal of our benchmark is to offer a comparative and considerable evaluation and further clarify the state-of-the-art among deepfake detection algorithms. Moreover, we hope that our benchmark will serve the deepfake detection community as a standardized benchmark and encourage the researchers to make reproducible and practical contributions to this field.
 
-## Leaderboard evaluated on Standard Test Datasets
+## Leaderboard on Standard Test Datasets
 
 <table>
     <thead>
@@ -182,7 +182,7 @@ The goal of our benchmark is to offer a comparative and considerable evaluation 
     </tbody>
 </table>
 
-## Leaderboard evaluated on ID Test Datasets
+## Leaderboard on ID Test Datasets
 <table>
     <thead>
         <tr>
