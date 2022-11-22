@@ -168,16 +168,29 @@ The goal of our benchmark is to offer a comparative and considerable evaluation 
         </tr>
         <tr>
             <td>Conv LSTM</td>
-            <td>92.0</td>
-            <td>100.0</td>
-            <td>99.6</td>
-            <td>100.0</td>
-            <td>99.7</td>
             <td>99.8</td>
+            <td>100.0</td>
+            <td>91.9</td>
             <td>99.9</td>
-            <td>86.7</td>
-            <td>60.7</td>
-            <td>93.1(98.7)</td>
+            <td>99.9</td>
+            <td>98.7</td>
+            <td>100.0</td>
+            <td>81.4</td>
+            <td>64.5</td>
+            <td>92.9(98.6)</td>
+        </tr>
+        <tr>
+            <td>LRNet</td>
+            <td>86.9</td>
+            <td>98.5</td>
+            <td>63.0</td>
+            <td>92.4</td>
+            <td>96.4</td>
+            <td>98.2</td>
+            <td>89.9</td>
+            <td>51.6</td>
+            <td>66.7</td>
+            <td>82.6(89.3)</td>
         </tr>
     </tbody>
 </table>
@@ -214,16 +227,16 @@ The goal of our benchmark is to offer a comparative and considerable evaluation 
   <tbody>
         <tr>
           <td>Face X-ray</td>
-          <td>54.1</td>
+          <td>53.9</td>
           <td>52.1</td>
-          <td>64.5</td>
-          <td>64.9</td>
-          <td>59.0</td>
-          <td>60.4</td>
-          <td>57.6</td>
+          <td>64.3</td>
+          <td>66.4</td>
+          <td>54.4</td>
+          <td>59.3</td>
+          <td>54.9</td>
           <td>-</td>
           <td>-</td>
-          <td>58.9(58.9)</td>
+          <td>57.9(57.9)</td>
         </tr>
         <tr>
            <td>FWA-Resnet50</td>
@@ -256,10 +269,10 @@ The goal of our benchmark is to offer a comparative and considerable evaluation 
             <td>57.2</td>
             <td>59.4</td>
             <td>59.9</td>
-            <td>47.3</td>
-            <td>53.6</td>
+            <td>47.4</td>
+            <td>53.7</td>
             <td>57.6</td>
-            <td>48.7</td>
+            <td>48.6</td>
             <td>61.6</td>
             <td>66.5</td>
             <td>56.8(54.8)</td>
@@ -279,55 +292,55 @@ The goal of our benchmark is to offer a comparative and considerable evaluation 
         </tr>
         <tr>
             <td>Patch-resnet</td>
-            <td>55.0</td>
+            <td>57.1</td>
+            <td>55.9</td>
+            <td>54.1</td>
+            <td>54.5</td>
+            <td>60.0</td>
+            <td>64.9</td>
+            <td>57.7</td>
             <td>59.8</td>
-            <td>60.4</td>
-            <td>60.7</td>
-            <td>62.1</td>
-            <td>62.7</td>
-            <td>58.8</td>
-            <td>59.3</td>
-            <td>63.7</td>
-            <td>60.2(59.9)</td>
+            <td>56.7</td>
+            <td>57.8(57.7)</td>
         </tr>
         <tr>
             <td>Patch-xception</td>
-            <td>52.5
-            <td>54.2
-            <td>62.0
-            <td>60.5
-            <td>61.8
-            <td>64.7
-            <td>61.1
-            <td>55.1
-            <td>64.3
-            <td>59.5(59.5)
+            <td>53.3</td>
+            <td>53.5</td>
+            <td>56.4</td>
+            <td>53.2</td>
+            <td>60.3</td>
+            <td>63.4</td>
+            <td>64.0</td>
+            <td>52.8</td>
+            <td>58.3</td>
+            <td>57.2(57.7)</td>
         </tr>
         <tr>
             <td>Xception</td>
             <td>55.9</td>
             <td>61.9</td>
-            <td>52.0</td>
+            <td>52.9</td>
             <td>59.8</td>
             <td>61.6</td>
             <td>52.1</td>
-            <td>49.0</td>
+            <td>48.0</td>
             <td>56.3</td>
-            <td>53.7</td>
-            <td>55.9(56.1)</td>
+            <td>57.0</td>
+            <td>56.1(56.0)</td>
         </tr>
         <tr>
             <td>FFD</td>
             <td>53.9</td>
-            <td>52.1</td>
-            <td>62.2</td>
-            <td>64.9</td>
-            <td>59.0</td>
-            <td>60.4</td>
-            <td>57.6</td>
+            <td>63.4</td>
+            <td>62.1</td>
+            <td>64.3</td>
+            <td>57.8</td>
+            <td>57.4</td>
+            <td>43.5</td>
             <td>-</td>
             <td>-</td>
-            <td>58.5(58.5)</td>
+            <td>57.4(57.4)</td>
         </tr>
         <tr>
             <td>Multi-attention</td>
@@ -344,16 +357,29 @@ The goal of our benchmark is to offer a comparative and considerable evaluation 
         </tr>
         <tr>
             <td>Conv LSTM</td>
-            <td>52.2</td>
             <td>56.3</td>
-            <td>65.5</td>
-            <td>65.5</td>
-            <td>74.8</td>
-            <td>69.8</td>
-            <td>47.6</td>
-            <td>67.9</td>
-            <td>51.9</td>
-            <td>61.3(61.8)</td>
+            <td>57.7</td>
+            <td>59.9</td>
+            <td>50.0</td>
+            <td>62.9</td>
+            <td>55.5</td>
+            <td>39.9</td>
+            <td>52.2</td>
+            <td>50.1</td>
+            <td>53.8(54.6)</td>
+        </tr>
+        <tr>
+            <td>LRNet</td>
+            <td>52.3</td>
+            <td>42.0</td>
+            <td>55.4</td>
+            <td>51.8</td>
+            <td>61.3</td>
+            <td>56.4</td>
+            <td>53.8</td>
+            <td>54.0</td>
+            <td>61.8</td>
+            <td>54.3(53.2)</td>
         </tr>
     </tbody>
 </table>
